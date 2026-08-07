@@ -1,1 +1,74 @@
-
+[
+  {
+    "titulo": "cowboy like me",
+    "artista": "Taylor Swift",
+    "audio": "musica/cowboy like me.mp3",
+    "portada": "covers/cowboy like me.png"
+  },
+  {
+    "titulo": "eternal sunshine",
+    "artista": "Ariana Grande",
+    "audio": "musica/eternal sunshine.mp3",
+    "portada": "covers/eternal sunshine.png"
+  },
+  {
+    "titulo": "go go juice",
+    "artista": "Sabrina Carpenter",
+    "audio": "musica/go go juice.mp3",
+    "portada": "covers/go go juice.png"
+  },
+  {
+    "titulo": "just like magic",
+    "artista": "Ariana Grande",
+    "audio": "musica/just like magic.mp3",
+    "portada": "covers/just like magic.png"
+  },
+  {
+    "titulo": "My Boy Only Breaks His Favorite Toys",
+    "artista": "Taylor Swift",
+    "audio": "musica/my boy only breaks his favorite toys.mp3",
+    "portada": "covers/my boy only breaks his favorite toys.png"
+  },
+  {
+    "titulo": "my way",
+    "artista": "Olivia Rodrigo",
+    "audio": "musica/my way.mp3",
+    "portada": "covers/my way.png"
+  },
+  {
+    "titulo": "opposite",
+    "artista": "Sabrina Carpenter",
+    "audio": "musica/opposite.mp3",
+    "portada": "covers/opposite.png"
+  },
+  {
+    "titulo": "Peter",
+    "artista": "Taylor Swift",
+    "audio": "musica/peter.mp3",
+    "portada": "covers/peter.png"
+  },
+  {
+    "titulo": "pretty isn't pretty",
+    "artista": "Olivia Rodrigo",
+    "audio": "musica/pretty isn't pretty.mp3",
+    "portada": "covers/pretty isn´t pretty.png"
+  },
+  {
+    "titulo": "sugar talking",
+    "artista": "Sabrina Carpenter",
+    "audio": "musica/sugar talking.mp3",
+    "portada": "covers/sugar talking.png"
+  },
+  {
+    "titulo": "supernatural",
+    "artista": "Ariana Grande",
+    "audio": "musica/supernatural.mp3",
+    "portada": "covers/supernatural.png"
+  },
+  {
+    "titulo": "the cure",
+    "artista": "Olivia Rodrigo",
+    "audio": "musica/the cure.mp3",
+    "portada": "covers/the cure.png"
+  }
+]
