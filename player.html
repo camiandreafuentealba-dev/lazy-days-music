@@ -5,22 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-
-/* ═══════════════════════════════
-   RESET — aquí Blogger NO MANDA ♡
-═══════════════════════════════ */
-
 *{
   box-sizing:border-box;
 }
 
 html,
 body{
+  width:100%;
   margin:0;
   padding:0;
-  width:100%;
-  background:transparent;
   overflow:hidden;
+  background:transparent;
 }
 
 body{
@@ -28,14 +23,13 @@ body{
 }
 
 
-/* ═══════════════════════════════
-             IPOD
-═══════════════════════════════ */
+/* ══════════════════════════════
+   IPOD
+══════════════════════════════ */
 
 #ipod{
   width:245px;
   margin:0 auto;
-
   padding:13px 12px 17px;
 
   border:1px solid #c8c8c8;
@@ -57,16 +51,14 @@ body{
 }
 
 
-/* ═══════════════════════════════
-            PANTALLA
-═══════════════════════════════ */
+/* ══════════════════════════════
+   PANTALLA
+══════════════════════════════ */
 
 #screen{
   position:relative;
-
   width:100%;
   height:108px;
-
   overflow:hidden;
 
   border:5px solid #171717;
@@ -78,55 +70,40 @@ body{
     inset 0 0 5px rgba(0,0,0,.35);
 }
 
-
-/* fondo de portada */
-
 #screen-bg{
   position:absolute;
-
   inset:-15px;
 
   background-position:center;
   background-size:cover;
 
   filter:blur(14px);
-
   transform:scale(1.2);
 
   opacity:.55;
 }
 
-
 #screen-overlay{
   position:absolute;
   inset:0;
 
-  background:
-    rgba(35,28,31,.28);
+  background:rgba(35,28,31,.28);
 }
-
-
-/* portada y texto */
 
 #screen-main{
   position:relative;
-
   z-index:2;
 
   display:flex;
-
   gap:10px;
 
   height:100%;
-
   padding:9px;
 }
-
 
 #cover{
   width:64px;
   height:64px;
-
   flex:0 0 64px;
 
   object-fit:cover;
@@ -137,12 +114,9 @@ body{
     0 2px 6px rgba(0,0,0,.32);
 }
 
-
 #info{
   min-width:0;
-
   flex:1;
-
   padding-top:9px;
 
   color:#fff;
@@ -150,7 +124,6 @@ body{
   text-shadow:
     0 1px 2px rgba(0,0,0,.35);
 }
-
 
 #title{
   overflow:hidden;
@@ -162,10 +135,8 @@ body{
   text-overflow:ellipsis;
 }
 
-
 #artist{
   margin-top:7px;
-
   overflow:hidden;
 
   font-size:10px;
@@ -175,13 +146,12 @@ body{
 }
 
 
-/* ═══════════════════════════════
-             PROGRESO
-═══════════════════════════════ */
+/* ══════════════════════════════
+   PROGRESO
+══════════════════════════════ */
 
 #progress-row{
   position:absolute;
-
   z-index:5;
 
   left:9px;
@@ -190,32 +160,29 @@ body{
 
   display:flex;
   align-items:center;
-
   gap:5px;
 
-  color:white;
+  color:#fff;
 
   font-family:"Courier New",monospace;
-
   font-size:8px;
-}
 
+  text-shadow:
+    0 1px 2px rgba(0,0,0,.4);
+}
 
 #progress-track{
   flex:1;
-
   height:7px;
 
   overflow:hidden;
 
   border-radius:20px;
 
-  background:
-    rgba(30,25,27,.35);
+  background:rgba(30,25,27,.35);
 
   cursor:pointer;
 }
-
 
 #progress-bar{
   width:0%;
@@ -223,14 +190,13 @@ body{
 
   border-radius:20px;
 
-  background:
-    rgba(255,255,255,.92);
+  background:rgba(255,255,255,.92);
 }
 
 
-/* ═══════════════════════════════
-              RUEDA
-═══════════════════════════════ */
+/* ══════════════════════════════
+   RUEDA
+══════════════════════════════ */
 
 #wheel{
   position:relative;
@@ -240,6 +206,7 @@ body{
 
   margin:15px auto 0;
 
+  border:1px solid #c9c9c9;
   border-radius:50%;
 
   background:
@@ -249,17 +216,12 @@ body{
       #eeeeee
     );
 
-  border:1px solid #c9c9c9;
-
   box-shadow:
     inset 0 1px 4px rgba(255,255,255,1),
     0 2px 4px rgba(0,0,0,.10);
 
   user-select:none;
 }
-
-
-/* círculo central */
 
 #center{
   position:absolute;
@@ -270,9 +232,9 @@ body{
   width:55px;
   height:55px;
 
-  transform:
-    translate(-50%,-50%);
+  transform:translate(-50%,-50%);
 
+  border:1px solid #c9c9c9;
   border-radius:50%;
 
   background:
@@ -282,109 +244,217 @@ body{
       #d9d9d9
     );
 
-  border:1px solid #c9c9c9;
-
   box-shadow:
     inset 0 1px 2px rgba(255,255,255,.9);
 }
 
-
-/* controles */
-
 .control{
   position:absolute;
-
   z-index:10;
 
-  color:#9fa2a6;
-
-  font-family:Arial,sans-serif;
-
-  font-weight:bold;
-
-  line-height:1;
-
   cursor:pointer;
-
-  text-align:center;
-
   user-select:none;
 }
 
-
-/* MUSIC */
-
 #menu{
   top:13px;
-
   left:50%;
 
-  transform:
-    translateX(-50%);
+  transform:translateX(-50%);
+
+  color:#9fa2a6;
 
   font-size:11px;
-
+  font-weight:bold;
   letter-spacing:.5px;
 }
 
 
-/* izquierda */
+/* ══════════════════════════════
+   BOTONES DIBUJADOS CON CSS
+══════════════════════════════ */
 
 #previous{
-  left:14px;
-
+  left:13px;
   top:50%;
 
-  transform:
-    translateY(-50%);
+  width:24px;
+  height:22px;
 
-  font-size:17px;
+  transform:translateY(-50%);
 }
-
-
-/* derecha */
 
 #next{
-  right:14px;
-
+  right:13px;
   top:50%;
 
-  transform:
-    translateY(-50%);
+  width:24px;
+  height:22px;
 
-  font-size:17px;
+  transform:translateY(-50%);
 }
-
-
-/* play/pause */
 
 #play{
   left:50%;
+  bottom:10px;
 
-  bottom:12px;
+  width:34px;
+  height:23px;
 
-  transform:
-    translateX(-50%);
-
-  width:35px;
-
-  font-size:15px;
+  transform:translateX(-50%);
 }
 
 
-/* ═══════════════════════════════
-             PLAYLIST
-═══════════════════════════════ */
+/* Anterior: barra + triángulo */
+
+#previous::before{
+  content:"";
+
+  position:absolute;
+  left:2px;
+  top:5px;
+
+  width:4px;
+  height:12px;
+
+  border-radius:1px;
+
+  background:#9fa2a6;
+}
+
+#previous::after{
+  content:"";
+
+  position:absolute;
+  left:5px;
+  top:3px;
+
+  width:0;
+  height:0;
+
+  border-top:8px solid transparent;
+  border-bottom:8px solid transparent;
+  border-right:11px solid #9fa2a6;
+}
+
+
+/* Siguiente: triángulo + barra */
+
+#next::before{
+  content:"";
+
+  position:absolute;
+  right:2px;
+  top:5px;
+
+  width:4px;
+  height:12px;
+
+  border-radius:1px;
+
+  background:#9fa2a6;
+}
+
+#next::after{
+  content:"";
+
+  position:absolute;
+  right:5px;
+  top:3px;
+
+  width:0;
+  height:0;
+
+  border-top:8px solid transparent;
+  border-bottom:8px solid transparent;
+  border-left:11px solid #9fa2a6;
+}
+
+
+/* Play */
+
+#play .play-triangle{
+  position:absolute;
+
+  left:2px;
+  top:3px;
+
+  width:0;
+  height:0;
+
+  border-top:8px solid transparent;
+  border-bottom:8px solid transparent;
+  border-left:12px solid #9fa2a6;
+}
+
+
+/* Pausa */
+
+#play .pause-bars{
+  display:none;
+
+  position:absolute;
+
+  left:9px;
+  top:3px;
+
+  width:16px;
+  height:16px;
+}
+
+#play .pause-bars::before,
+#play .pause-bars::after{
+  content:"";
+
+  position:absolute;
+  top:0;
+
+  width:5px;
+  height:16px;
+
+  border-radius:1px;
+
+  background:#9fa2a6;
+}
+
+#play .pause-bars::before{
+  left:0;
+}
+
+#play .pause-bars::after{
+  right:0;
+}
+
+
+/* Estado reproduciendo */
+
+#play.playing .play-triangle{
+  display:none;
+}
+
+#play.playing .pause-bars{
+  display:block;
+}
+
+
+/* Efecto al presionar */
+
+.control:active{
+  opacity:.6;
+}
+
+
+/* ══════════════════════════════
+   PLAYLIST
+══════════════════════════════ */
 
 #playlist{
   display:none;
 
   width:245px;
-
   max-height:95px;
 
   margin:7px auto 0;
-
   padding:5px;
 
   overflow-y:auto;
@@ -392,19 +462,14 @@ body{
   background:#fff8fb;
 
   border:1px solid #eccfd9;
-
   border-radius:10px;
 
-  font-family:
-    "Courier New",
-    monospace;
+  font-family:"Courier New",monospace;
 }
-
 
 #playlist.open{
   display:block;
 }
-
 
 .song{
   padding:6px 7px;
@@ -418,37 +483,26 @@ body{
   cursor:pointer;
 }
 
-
 .song:hover,
 .song.current{
   background:#ffe5ef;
-
   color:#bd7892;
 }
-
 </style>
 </head>
 
-
 <body>
 
-
 <div id="ipod">
-
-
-  <!-- PANTALLA -->
 
   <div id="screen">
 
     <div id="screen-bg"></div>
-
     <div id="screen-overlay"></div>
-
 
     <div id="screen-main">
 
-      <img id="cover" alt="portada">
-
+      <img id="cover" alt="Portada">
 
       <div id="info">
 
@@ -464,20 +518,15 @@ body{
 
     </div>
 
-
     <div id="progress-row">
 
       <span id="current-time">
         0:00
       </span>
 
-
       <div id="progress-track">
-
         <div id="progress-bar"></div>
-
       </div>
-
 
       <span id="duration">
         0:00
@@ -488,11 +537,7 @@ body{
   </div>
 
 
-
-  <!-- RUEDA -->
-
   <div id="wheel">
-
 
     <div
       id="menu"
@@ -500,35 +545,33 @@ body{
       MUSIC
     </div>
 
-
     <div
       id="previous"
-      class="control">
-      ◀
+      class="control"
+      title="Canción anterior">
     </div>
-
 
     <div id="center"></div>
 
-
     <div
       id="next"
-      class="control">
-      ▶
+      class="control"
+      title="Canción siguiente">
     </div>
-
 
     <div
       id="play"
-      class="control">
-      ▶Ⅱ
-    </div>
+      class="control"
+      title="Reproducir o pausar">
 
+      <span class="play-triangle"></span>
+      <span class="pause-bars"></span>
+
+    </div>
 
   </div>
 
 </div>
-
 
 
 <div id="playlist"></div>
@@ -540,577 +583,426 @@ body{
 </audio>
 
 
-
 <script>
-
 (function(){
 
+  const BASE =
+    "https://camiandreafuentealba-dev.github.io/lazy-days-music/";
 
-/* ═══════════════════════════════
-        ARCHIVOS DE GITHUB
-═══════════════════════════════ */
-
-const BASE =
-  "https://camiandreafuentealba-dev.github.io/lazy-days-music/";
-
-const PLAYLIST_URL =
-  BASE + "playlist.json";
+  const PLAYLIST_URL =
+    BASE + "playlist.json";
 
 
+  const audio =
+    document.getElementById("audio");
 
-/* ELEMENTOS */
+  const cover =
+    document.getElementById("cover");
 
-const audio =
-  document.getElementById("audio");
+  const background =
+    document.getElementById("screen-bg");
 
-const cover =
-  document.getElementById("cover");
+  const title =
+    document.getElementById("title");
 
-const background =
-  document.getElementById("screen-bg");
+  const artist =
+    document.getElementById("artist");
 
-const title =
-  document.getElementById("title");
+  const play =
+    document.getElementById("play");
 
-const artist =
-  document.getElementById("artist");
+  const previous =
+    document.getElementById("previous");
 
-const play =
-  document.getElementById("play");
+  const next =
+    document.getElementById("next");
 
-const previous =
-  document.getElementById("previous");
+  const menu =
+    document.getElementById("menu");
 
-const next =
-  document.getElementById("next");
+  const progressTrack =
+    document.getElementById("progress-track");
 
-const menu =
-  document.getElementById("menu");
+  const progressBar =
+    document.getElementById("progress-bar");
 
-const progressTrack =
-  document.getElementById("progress-track");
+  const currentTime =
+    document.getElementById("current-time");
 
-const progressBar =
-  document.getElementById("progress-bar");
+  const duration =
+    document.getElementById("duration");
 
-const currentTime =
-  document.getElementById("current-time");
-
-const duration =
-  document.getElementById("duration");
-
-const playlist =
-  document.getElementById("playlist");
+  const playlist =
+    document.getElementById("playlist");
 
 
-
-let songs = [];
-
-let currentSong = 0;
+  let songs = [];
+  let currentSong = 0;
 
 
+  function pathURL(path){
 
-/* arreglar espacios de nombres */
+    return path
+      .split("/")
+      .map(function(part){
+        return encodeURIComponent(part);
+      })
+      .join("/");
 
-function pathURL(path){
+  }
 
-  return path
-    .split("/")
-    .map(function(part){
 
-      return encodeURIComponent(part);
+  function formatTime(seconds){
+
+    if(!isFinite(seconds)){
+      return "0:00";
+    }
+
+    const minutes =
+      Math.floor(seconds / 60);
+
+    const secs =
+      Math.floor(seconds % 60)
+        .toString()
+        .padStart(2,"0");
+
+    return minutes + ":" + secs;
+
+  }
+
+
+  function loadSong(index){
+
+    if(!songs.length){
+      return;
+    }
+
+    if(index < 0){
+      index = songs.length - 1;
+    }
+
+    if(index >= songs.length){
+      index = 0;
+    }
+
+    currentSong = index;
+
+    const song =
+      songs[currentSong];
+
+    const audioURL =
+      BASE + pathURL(song.audio);
+
+    const coverURL =
+      BASE + pathURL(song.portada);
+
+    title.textContent =
+      song.titulo;
+
+    artist.textContent =
+      song.artista;
+
+    cover.src =
+      coverURL;
+
+    background.style.backgroundImage =
+      'url("' + coverURL + '")';
+
+    audio.src =
+      audioURL;
+
+    audio.load();
+
+    progressBar.style.width =
+      "0%";
+
+    currentTime.textContent =
+      "0:00";
+
+    duration.textContent =
+      "0:00";
+
+    play.classList.remove(
+      "playing"
+    );
+
+    updatePlaylist();
+
+  }
+
+
+  function startPlaying(){
+
+    audio.play()
+      .catch(function(error){
+        console.log(error);
+      });
+
+  }
+
+
+  function nextSong(){
+
+    loadSong(currentSong + 1);
+    startPlaying();
+
+  }
+
+
+  function previousSong(){
+
+    loadSong(currentSong - 1);
+    startPlaying();
+
+  }
+
+
+  play.addEventListener(
+    "click",
+    function(){
+
+      if(audio.paused){
+        startPlaying();
+      }else{
+        audio.pause();
+      }
+
+    }
+  );
+
+
+  previous.addEventListener(
+    "click",
+    previousSong
+  );
+
+
+  next.addEventListener(
+    "click",
+    nextSong
+  );
+
+
+  menu.addEventListener(
+    "click",
+    function(){
+
+      playlist.classList.toggle(
+        "open"
+      );
+
+    }
+  );
+
+
+  audio.addEventListener(
+    "play",
+    function(){
+
+      play.classList.add(
+        "playing"
+      );
+
+    }
+  );
+
+
+  audio.addEventListener(
+    "pause",
+    function(){
+
+      play.classList.remove(
+        "playing"
+      );
+
+    }
+  );
+
+
+  audio.addEventListener(
+    "ended",
+    nextSong
+  );
+
+
+  audio.addEventListener(
+    "loadedmetadata",
+    function(){
+
+      duration.textContent =
+        formatTime(audio.duration);
+
+    }
+  );
+
+
+  audio.addEventListener(
+    "timeupdate",
+    function(){
+
+      if(!audio.duration){
+        return;
+      }
+
+      const percentage =
+        (
+          audio.currentTime /
+          audio.duration
+        ) * 100;
+
+      progressBar.style.width =
+        percentage + "%";
+
+      currentTime.textContent =
+        formatTime(
+          audio.currentTime
+        );
+
+      duration.textContent =
+        formatTime(
+          audio.duration
+        );
+
+    }
+  );
+
+
+  progressTrack.addEventListener(
+    "click",
+    function(event){
+
+      if(!audio.duration){
+        return;
+      }
+
+      const rect =
+        progressTrack
+          .getBoundingClientRect();
+
+      const position =
+        event.clientX - rect.left;
+
+      let percentage =
+        position / rect.width;
+
+      percentage =
+        Math.max(
+          0,
+          Math.min(1,percentage)
+        );
+
+      audio.currentTime =
+        percentage * audio.duration;
+
+    }
+  );
+
+
+  function createPlaylist(){
+
+    playlist.innerHTML =
+      "";
+
+    songs.forEach(
+      function(song,index){
+
+        const item =
+          document.createElement(
+            "div"
+          );
+
+        item.className =
+          "song";
+
+        item.textContent =
+          "♡ " +
+          song.titulo +
+          " — " +
+          song.artista;
+
+        item.addEventListener(
+          "click",
+          function(){
+
+            loadSong(index);
+            startPlaying();
+
+            playlist.classList.remove(
+              "open"
+            );
+
+          }
+        );
+
+        playlist.appendChild(
+          item
+        );
+
+      }
+    );
+
+  }
+
+
+  function updatePlaylist(){
+
+    const items =
+      playlist.querySelectorAll(
+        ".song"
+      );
+
+    items.forEach(
+      function(item,index){
+
+        item.classList.toggle(
+          "current",
+          index === currentSong
+        );
+
+      }
+    );
+
+  }
+
+
+  fetch(PLAYLIST_URL)
+
+    .then(function(response){
+
+      if(!response.ok){
+
+        throw new Error(
+          "No se pudo cargar playlist.json"
+        );
+
+      }
+
+      return response.json();
 
     })
-    .join("/");
 
-}
+    .then(function(data){
 
+      songs = data;
 
-
-/* tiempo */
-
-function formatTime(seconds){
-
-  if(!isFinite(seconds)){
-
-    return "0:00";
-
-  }
-
-
-  const minutes =
-    Math.floor(seconds / 60);
-
-
-  const secs =
-    Math.floor(seconds % 60)
-      .toString()
-      .padStart(2,"0");
-
-
-  return minutes + ":" + secs;
-
-}
-
-
-
-/* cargar canción */
-
-function loadSong(index){
-
-
-  if(!songs.length){
-
-    return;
-
-  }
-
-
-  if(index < 0){
-
-    index =
-      songs.length - 1;
-
-  }
-
-
-  if(index >= songs.length){
-
-    index = 0;
-
-  }
-
-
-  currentSong = index;
-
-
-  const song =
-    songs[currentSong];
-
-
-  const audioURL =
-    BASE +
-    pathURL(song.audio);
-
-
-  const coverURL =
-    BASE +
-    pathURL(song.portada);
-
-
-  title.textContent =
-    song.titulo;
-
-
-  artist.textContent =
-    song.artista;
-
-
-  cover.src =
-    coverURL;
-
-
-  background.style.backgroundImage =
-    'url("' +
-    coverURL +
-    '")';
-
-
-  audio.src =
-    audioURL;
-
-
-  progressBar.style.width =
-    "0%";
-
-
-  currentTime.textContent =
-    "0:00";
-
-
-  duration.textContent =
-    "0:00";
-
-
-  updatePlaylist();
-
-}
-
-
-
-/* reproducir */
-
-function startPlaying(){
-
-
-  audio.play()
-
-    .then(function(){
-
-      play.textContent =
-        "Ⅱ";
+      createPlaylist();
+      loadSong(0);
 
     })
 
     .catch(function(error){
 
-      console.log(error);
+      title.textContent =
+        "playlist error";
+
+      artist.textContent =
+        "revisa GitHub";
+
+      console.error(error);
 
     });
 
-}
-
-
-
-/* siguiente */
-
-function nextSong(){
-
-  loadSong(
-    currentSong + 1
-  );
-
-  startPlaying();
-
-}
-
-
-
-/* anterior */
-
-function previousSong(){
-
-  loadSong(
-    currentSong - 1
-  );
-
-  startPlaying();
-
-}
-
-
-
-/* CONTROLES */
-
-play.addEventListener(
-  "click",
-  function(){
-
-
-    if(audio.paused){
-
-      startPlaying();
-
-    }
-
-    else{
-
-      audio.pause();
-
-    }
-
-  }
-);
-
-
-
-previous.addEventListener(
-  "click",
-  previousSong
-);
-
-
-
-next.addEventListener(
-  "click",
-  nextSong
-);
-
-
-
-menu.addEventListener(
-  "click",
-  function(){
-
-    playlist.classList.toggle(
-      "open"
-    );
-
-  }
-);
-
-
-
-/* estados play */
-
-audio.addEventListener(
-  "play",
-  function(){
-
-    play.textContent =
-      "Ⅱ";
-
-  }
-);
-
-
-
-audio.addEventListener(
-  "pause",
-  function(){
-
-    play.textContent =
-      "▶Ⅱ";
-
-  }
-);
-
-
-
-/* pasar canción automáticamente */
-
-audio.addEventListener(
-  "ended",
-  nextSong
-);
-
-
-
-/* duración */
-
-audio.addEventListener(
-  "loadedmetadata",
-  function(){
-
-    duration.textContent =
-      formatTime(
-        audio.duration
-      );
-
-  }
-);
-
-
-
-/* barra */
-
-audio.addEventListener(
-  "timeupdate",
-  function(){
-
-
-    if(!audio.duration){
-
-      return;
-
-    }
-
-
-    const percentage =
-      (
-        audio.currentTime /
-        audio.duration
-      ) * 100;
-
-
-    progressBar.style.width =
-      percentage + "%";
-
-
-    currentTime.textContent =
-      formatTime(
-        audio.currentTime
-      );
-
-
-    duration.textContent =
-      formatTime(
-        audio.duration
-      );
-
-  }
-);
-
-
-
-/* adelantar haciendo clic */
-
-progressTrack.addEventListener(
-  "click",
-  function(event){
-
-
-    if(!audio.duration){
-
-      return;
-
-    }
-
-
-    const rect =
-      progressTrack
-        .getBoundingClientRect();
-
-
-    const position =
-      event.clientX -
-      rect.left;
-
-
-    audio.currentTime =
-      (
-        position /
-        rect.width
-      ) *
-      audio.duration;
-
-  }
-);
-
-
-
-/* crear playlist */
-
-function createPlaylist(){
-
-
-  playlist.innerHTML =
-    "";
-
-
-  songs.forEach(
-    function(song,index){
-
-
-      const item =
-        document.createElement(
-          "div"
-        );
-
-
-      item.className =
-        "song";
-
-
-      item.textContent =
-        "♡ " +
-        song.titulo +
-        " — " +
-        song.artista;
-
-
-      item.addEventListener(
-        "click",
-        function(){
-
-
-          loadSong(index);
-
-
-          startPlaying();
-
-
-          playlist
-            .classList
-            .remove("open");
-
-        }
-      );
-
-
-      playlist.appendChild(
-        item
-      );
-
-    }
-  );
-
-}
-
-
-
-/* marcar canción */
-
-function updatePlaylist(){
-
-
-  const items =
-    playlist.querySelectorAll(
-      ".song"
-    );
-
-
-  items.forEach(
-    function(item,index){
-
-
-      item.classList.toggle(
-        "current",
-        index === currentSong
-      );
-
-    }
-  );
-
-}
-
-
-
-/* ═══════════════════════════════
-       CARGAR PLAYLIST.JSON
-═══════════════════════════════ */
-
-fetch(PLAYLIST_URL)
-
-  .then(function(response){
-
-
-    if(!response.ok){
-
-      throw new Error(
-        "No se pudo cargar playlist.json"
-      );
-
-    }
-
-
-    return response.json();
-
-  })
-
-
-  .then(function(data){
-
-
-    songs = data;
-
-
-    createPlaylist();
-
-
-    loadSong(0);
-
-  })
-
-
-  .catch(function(error){
-
-
-    title.textContent =
-      "playlist error";
-
-
-    artist.textContent =
-      "♡";
-
-
-    console.error(error);
-
-  });
-
-
 })();
-
 </script>
 
 </body>
