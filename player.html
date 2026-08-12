@@ -9,17 +9,18 @@
   box-sizing:border-box;
 }
 
-html,body{
+html,
+  body{
   margin:0;
   padding:0;
+  width:100%;  
   background:transparent;
   font-family:Arial,sans-serif;
+  overflow:hidden; 
 }
 
 body{
-  display:flex;
-  justify-content:center;
-  align-items:flex-start;
+  display:block;
 }
 
 /* ═══════════════════════════════
@@ -28,8 +29,9 @@ body{
 
 #ipod{
   width:235px;
-  max-width:100%;
+  max-width:calc(100% - 4px);
   height:310px;
+  margin:0 auto;
 
   padding:14px;
 
